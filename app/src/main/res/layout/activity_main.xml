@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_behaviour="@string/appbar_scrolling_view_behaviour">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textview_web_url"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Web_URL"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf=""
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_input_url"
+                android:ems="10"
+                android:inputType="text"
+                android:text="https://www.google.com"
+                app:layout_constraintStart_toEndOf="@+id/textview_web_url"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_browse"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_browse"
+                android:text="Browse"
+                app:layout_constraintTop_toTopOf="@+id/text_input_url"
+                app:layout_constraintBottom_toBottomOf="@+id/text_input_url"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_input_url"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="-13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview_call"
+                android:text="Phone_no"
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_web_url"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone_url"
+                android:ems="10"
+                android:inputType="phone"
+                app:layout_constraintStart_toEndOf="@+id/textview_call"
+                app:layout_constraintEnd_toStartOf="@+id/phone_button"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textview_call"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone_button"
+                android:text="Call"
+                app:layout_constraintStart_toEndOf="@+id/phone_url"
+                app:layout_constraintEnd_toEndOf="@+id/button_browse"
+                app:layout_constraintBaseline_toBaselineOf="@+id/phone_url"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_call_log"
+                android:text="Call_Log"
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_call"
+                />
+
+            <Button
+                android:id="@+id/call_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Log"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_call_log"
+                app:layout_constraintEnd_toEndOf="@+id/phone_button"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/text_call_log" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Gallery"
+                android:text="Gallery"
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_call_log"/>
+            <Button
+                android:id="@+id/gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="244dp"
+                android:layout_marginTop="36dp"
+                android:text="Gallery"
+                app:layout_constraintStart_toEndOf="@+id/Gallery"
+                app:layout_constraintTop_toBottomOf="@+id/text_call_log" />
+
+            <TextView
+                android:id="@+id/Camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="68dp"
+                android:text="Camera"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Gallery" />
+
+            <Button
+                android:id="@+id/camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="232dp"
+                android:layout_marginTop="36dp"
+                android:text="Camera"
+                app:layout_constraintStart_toEndOf="@+id/Camera"
+                app:layout_constraintTop_toBottomOf="@+id/gallery" />
+
+            <TextView
+                android:id="@+id/Alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:text="Alarm"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Camera" />
+
+            <Button
+                android:id="@+id/alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="36dp"
+                android:text="Alarm"
+                app:layout_constraintStart_toEndOf="@+id/Alarm"
+                app:layout_constraintTop_toBottomOf="@+id/camera" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
